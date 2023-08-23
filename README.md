@@ -1,2 +1,0 @@
-# angular-ogreniyorum
-# angular-ogreniyorum
