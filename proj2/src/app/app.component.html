@@ -1,0 +1,10 @@
+{{title}}
+<p></p>
+<input type="text" [value]="title">
+
+<!-- Property Binding -->
+<app-home [title]="title"></app-home>
+
+<!-- Two Way Data Binding -->
+<input type="text" [(ngModel)]="name">
+<p>{{name}}</p>
