@@ -1,0 +1,36 @@
+<!-- ngFor -->
+<ul class="list-group">
+  <li *ngFor="let name of names;index as i" class="list-group-item">{{name}} - {{i}}</li>
+</ul>
+
+<!-- ngIf -->
+<div *ngIf="visible;else elseContent">Merhaba!</div>
+<ng-template #elseContent>
+  Şu anda değer false!
+</ng-template>
+
+<!-- ngSwitch -->
+<span *[ngSwitch]="number">
+  <p *ngSwitchCase="1">Bir</p>
+  <p *ngSwitchCase="2">İki</p>
+  <p *ngSwitchDefault>Default</p>
+</span>
+
+<!-- Custom Directive -->
+
+<!-- '.' ile kullanıldığı zaman directive'in kullanım şekili -->
+<div class="appExample">Class Directive</div>
+
+<!-- '[]' ile kullanıldığı zaman directive'in kullanım şekili -->
+<div appExample color=orange>Attribute Directive</div>
+
+<!-- Structural Directive -->
+<!-- Custom If  -->
+<span *appCustomif="true">Merhaba!</span>
+
+<!-- Custom For -->
+<!-- <li *appCustomfor="5,let i = index">Engin {{i}}</li> -->
+
+<ul class="list-group">
+  <li *appCustomfor="names,let forName = name" class="list-group-item">{{forName}}</li>
+</ul>
