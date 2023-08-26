@@ -1,0 +1,36 @@
+<!-- Büyük Harf -->
+{{name | uppercase}}
+
+<!-- Küçü Harf -->
+{{name | lowercase}}
+
+<!-- Parçala -->
+{{name | slice:3:1}}
+
+<!-- Para Birimi -->
+{{10000 | currency}}
+{{10000 | currency : "₺"}}
+
+<!-- Tarih -->
+{{04.02.2003 | date}}
+{{04.02.2003 | date : 'fulldate'}}
+{{04.02.2003 | date : 'medium'}}
+{{04.02.2003 | date : 'shortTime'}}
+{{04.02.2003 | date : 'mm:ss'}}
+
+<!-- Json --->
+{{{name : "Engin",surname:"Bolat"} | json}}
+
+<!-- Percent -->
+{{50 | percent}}
+
+<!-- TitleCase -->
+{{"engin bolat" | titlecase}}
+
+<!-- Key -->
+<ul>
+  <li *ngFor="let name of names | keyvalue">{{name.key}} - {{name.value}}</li>
+</ul>
+
+<!-- Custom Pipe -->
+{{ "Burada yer alan cümle custom pipe için test cümlesidir." | custom: 9 : 5 }}
