@@ -1,0 +1,55 @@
+<form [formGroup]="frm" (ngSubmit)="onSubmit()" class="m-3">
+    <div class="row">
+        <div class="col">
+            <label for="name">Name</label>
+
+            <input type="text" formControlName="name" class="form-control" placeholder="John"><br>
+            <div class="col">
+                <label for="name" *ngIf="!name.valid && (name.touched ||name.dirty)" style="color: red;">Lütfen Geçerli
+                    Bir İsim
+                    Giriniz!</label>
+            </div>
+
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" class="form-control" placeholder="example@gmail.com"><br>
+            <div class="col">
+                <label for="email" *ngIf="!email.valid && (email.touched ||email.dirty)" style="color: red;">Lütfen
+                    Geçerli Bir Mail Adresi
+                    Giriniz!</label>
+            </div>
+
+        </div>
+        <div class="col">
+            <label for="surname">Surname</label>
+            <input type="text" formControlName="surname" class="form-control" placeholder="Bray"><br>
+            <div class="c">
+                <label for="surname" *ngIf="!surname.valid && (surname.touched ||surname.dirty)"
+                    style="color: red;">Lütfen Geçerli Bir
+                    Soyisim
+                    Giriniz!</label>
+            </div>
+
+            <label for="phone">Phone</label>
+            <input type="number" formControlName="phone" class="form-control" [min]="0" placeholder="5555555555"><br>
+        </div>
+        <div formGroupName="adress">
+            <div class="row">
+                <div class="col">
+                    <label for="country">Country</label>
+                    <input type="text" formControlName="country" class="form-control" placeholder="Turkey"><br>
+                </div>
+
+                <div class="col">
+                    <label for="city">City</label>
+                    <input type="text" formControlName="city" class="form-control" placeholder="Ankara"><br>
+                </div>
+
+                <div class="col-6">
+                    <label for="adress">Adress</label>
+                    <input type="text" formControlName="adress" class="form-control" placeholder="YeniMahalle"><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-success mr-3" id="submitButton">Submit</button>
+</form>

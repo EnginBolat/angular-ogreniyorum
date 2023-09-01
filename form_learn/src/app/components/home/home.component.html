@@ -1,0 +1,49 @@
+<div>
+    <form #frm="ngForm" (ngSubmit)="onSubmit(frm.value)" class="m-3">
+        <div class="row">
+            <div class="col">
+                <label for="name">Name</label>
+                <input type="text" name="name" ngModel class="form-control">
+            </div>
+            <div class="col">
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" ngModel class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="email">Email</label>
+                <input type="email" name="email" ngModel class="form-control">
+            </div>
+            <div class="col">
+                <label for="phone">Phone</label>
+                <input type="number" name="phone" class="form-control">
+            </div>
+        </div>
+
+        <div ngModelGroup="adress">
+            <div class="row">
+                <div class="col">
+                    <label for="country">Country</label>
+                    <input type="text" name="country" class="form-control"><br>
+                </div>
+
+                <div class="col">
+                    <label for="city">City</label>
+                    <input type="text" name="city" class="form-control"><br>
+                </div>
+
+                <div class="col-7">
+                    <label for="Adress">Adress</label>
+                    <input type="text" name="adress" class="form-control"><br>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="btn btn-primary">Send</button>
+    </form>
+    <div class="btn btn-warning m-3" (click)="loadData()">Load Data</div>
+
+</div>
